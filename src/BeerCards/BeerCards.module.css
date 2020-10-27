@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+
+.mainContainer {
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  right: 0; 
+  height: 100vh;
+  width: 80vw;
+}
+.mainContainer .pageContainer {
+  justify-content: space-between;
+  justify-content: center;
+  background: #2C343B;
+  border-left: 1px solid #E5E1D1;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 50vh;
+  height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+}
+.mainContainer .pageContainer .cardContainer {
+  backface-visibility: hidden;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 2px solid #E5E1D1;
+  background: #C44741;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.mainContainer .pageContainer .cardContainer .titleContainer {
+  width: 100%;
+  height: 15%;
+  top: 0;
+  position: absolute;
+  background-color: #2C343B;
+  border-bottom: 1px solid #E5E1D1;
+}
+.mainContainer .pageContainer .cardContainer button {
+  width: 100%;
+  height: 15%;
+  bottom: 0;
+  position: absolute;
+  font-size: 20px;
+  background-color: #E58277;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+.mainContainer .pageContainer .cardContainer button:hover {
+  border: 1px solid #E5E1D1;
+}
+.mainContainer .pageContainer .cardContainer button img {
+  z-index: 1;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(2) {
+  background: #D94838;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(5) {
+  background: #F44442;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(4) {
+  background: #3F5A8D;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(3) {
+  background: #4B6382;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(6) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(7) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(8) {
+  background: #D94838;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(9) {
+  background: #F44442;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(10) {
+  background: #3F5A8D;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(11) {
+  background: #4B6382;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(12) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(13) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(14) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(15) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(16) {
+  background: #D94838;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(17) {
+  background: #F44442;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(18) {
+  background: #3F5A8D;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(19) {
+  background: #4B6382;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(20) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(21) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(22) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(23) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(24) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(25) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(26) {
+  background: #D94838;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(27) {
+  background: #F44442;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(28) {
+  background: #3F5A8D;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(29) {
+  background: #4B6382;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(30) {
+  background: #7FB1B3;
+}
+.mainContainer .pageContainer .cardContainer:nth-child(31) {
+  background: #C44741;
+}
+.mainContainer .pageContainer .cardContainer img {
+  height: 30vh;
+  position: absolute;
+  bottom: 15%;
+}
+.mainContainer .pageContainer .cardContainer h1 {
+  padding: 5px;
+  position: absolute;
+  font-size: 15px;
+}
+.mainContainer .pageContainer .cardContainer .abv {
+  position: absolute;
+  bottom: 5%;
+  padding: 10px;
+  right: 0;
+}
+.mainContainer .pageContainer .cardContainer .tagline {
+  position: absolute;
+  bottom: 0%;
+  padding: 10px;
+  right: 0;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 1124px) {
+  .mainContainer .pageContainer {
+    grid-template-columns: 1fr;
+  }
+}
