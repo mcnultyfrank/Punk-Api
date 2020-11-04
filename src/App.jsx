@@ -5,36 +5,67 @@ import SideBar from "./SideBar";
 import { useState, useEffect } from 'react';
 
 
-function App() {
+const App = () => {
+  // const [searchBeers, setSearchBeers] = useState('');
+  const [showBeers, setShowBeers] = useState([]);
+  const [inputValue, setInputValue] = useState("");
   const getApi = (searchTerm) => {
     fetch("https://api.punkapi.com/v2/beers?"  + searchTerm)
     .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         setShowBeers(response);
-    
-
       })
   }
 
-  
-  const [searchBeers, setSearchBeers] = useState('');
-  const [showBeers, setShowBeers] = useState('');
+  const searchGetApi = (search) => {
+    fetch("https://api.punkapi.com/v2/beers?"  + search)
+    .then((res) => res.json())
+      .then((response) => {
+        setInputValue(response);
+        console.log('this is the api log');
+        
+        console.log(setInputValue(response));
+      })
+  }
 
   useEffect(getApi, []);
+  useEffect(searchGetApi, []);
+  const strongBeers = () => {
+    return getApi("abv_gt=5");
+  }
+  const mediumBeers = () => {
+    return getApi("abv_lt=5");
+  }
+  const weakBeers = () => {
+    return getApi("abv_lt=1");
+  }
+  const searchBeersFunction = () => {
+    return searchGetApi(inputValue);
+  }
 
-  // console.log(showBeers);
-  
-  
-  
+
+
   return (
     <div>
-      <SideBar updateBeers = {getApi} showBeers = {showBeers}/>
-      <BeerCards  showBeers = {showBeers}/>
-      
-      
+      <SideBar 
+      // showBeers = {showBeers}
+      updateInput={(value) => setInputValue(value)}
+      // 2. pass function down to child component
+      handleStrongClick={strongBeers}
+      handleMediumClick={mediumBeers}
+      handleWeakClick={weakBeers}
+
+
+
+      />
+      <BeerCards
+      showBeers = {showBeers}
+
+      />
+       
     </div>
   );
 }
+
 
 export default App;

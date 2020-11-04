@@ -7,37 +7,27 @@ import BeerCards from "../BeerCards";
 
 
 const SideBar = (props) => {
-  const {showBeers} = props;
+  const {handleStrongClick, handleWeakClick, handleMediumClick} = props;
 
-  // destructuring
-  const {updateBeers} = props;
-  const searchTerm = (e => updateBeers(e.target.value))
-  const random = (e => updateBeers("random"))
-  const strongBeer = (e => updateBeers("abv_gt=5"))
-  const weakBeer = (e => updateBeers("abv_lt=5"))
-  const testing = (e =>  console.log(showBeers.map((item) => {
-    return item.name;
-   })))
-
-
-
- 
   return (
     <div className={styles.sidebarContainer}>
       <section className={styles.sidebarContent}>
-    <input className={styles.inputText}type = "text" placeholder ="Greatness awaits you..." onInput={searchTerm}></input>
-    <button className={styles.randomButton} onClick={random}><FontAwesomeIcon icon={faRandom} /></button>
-    <button className={styles.randomButton} onClick={strongBeer}>5% +</button>
-    <button className={styles.randomButton} onClick={weakBeer}>5% -</button>
-    <button className={styles.randomButton} onClick={testing}> -</button>
-
-
-
-
-      
-      
-
-
+          <input className={styles.inputText}type = "text" placeholder ="Greatness awaits you..." onInput={(e) => props.updateInput(e.target.value)}></input>
+        <form className={styles.beerStrengthRadioForm}>
+          <h3>Beer Strength</h3>
+            <div className={styles.strongRadio}>
+            <label for = "strong">Over 5%</label>
+              <input onClick={handleStrongClick} type="radio" id="strong" name = "beerStrength"></input>
+            </div>
+            <div className={styles.mediumRadio}>
+            <label for = "medium">0.5% - 5%</label>
+              <input onClick={handleMediumClick} type="radio" id="medium" name = "beerStrength"></input>
+            </div>
+            <div className={styles.weakRadio}>
+            <label for = "weak">Less than 0.5%</label>
+              <input onClick={handleWeakClick} type="radio" id="weak" name = "beerStrength"></input>
+            </div>
+        </form>
       </section>
     </div>
   );

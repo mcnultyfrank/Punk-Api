@@ -16,6 +16,37 @@
         height: 100vh;
         width: 20vw;
         background: #52616D;
+        .beerStrengthRadioForm{
+            border-bottom: 1px solid #E5E1D1;
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px 20px 5px;
+            padding: 5px;
+            width: 15vw;
+            background-color: #2C343B;
+            transition: 0.3s;
+
+            div{
+                position: relative;
+                flex-direction: row;
+                justify-content: start;
+                margin: 20px 0px 20px 5px;
+                
+                input{
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                    
+                }
+                label{
+                    cursor: pointer;
+                    &:hover{
+                        color: #C44741;
+                    }
+                }
+            }
+            
+        }
         .randomButton{
             font-size: 20px;
             width: 40%;
@@ -71,8 +102,20 @@
     
     }
 }
+
 @media only screen and (max-width: 1124px){
-    
+    .beerStrengthRadioForm{
+        h3{
+            font-size: 1.8vw;
+
+        }
+        label{
+            font-size: 1.8vw;
+        }
+        input{
+            display: none;
+        }
+    }
         ::placeholder{
             color: red;
             font-weight: 500;
