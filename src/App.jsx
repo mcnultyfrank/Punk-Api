@@ -18,13 +18,15 @@ const App = () => {
   }
 
   const searchGetApi = (search) => {
-    fetch("https://api.punkapi.com/v2/beers?"  + search)
+    fetch("https://api.punkapi.com/v2/beers?beer_name?"  + "buzz")
     .then((res) => res.json())
       .then((response) => {
-        setInputValue(response);
+        setShowBeers(response);
+        console.log(response);
+        
+        
         console.log('this is the api log');
         
-        console.log(setInputValue(response));
       })
   }
 
@@ -39,17 +41,11 @@ const App = () => {
   const weakBeers = () => {
     return getApi("abv_lt=1");
   }
-  const searchBeersFunction = () => {
-    return searchGetApi(inputValue);
-  }
-
-
-
   return (
     <div>
       <SideBar 
       // showBeers = {showBeers}
-      updateInput={(value) => setInputValue(value)}
+      updateInput={searchGetApi}
       // 2. pass function down to child component
       handleStrongClick={strongBeers}
       handleMediumClick={mediumBeers}

@@ -8,11 +8,12 @@ import BeerCards from "../BeerCards";
 
 const SideBar = (props) => {
   const {handleStrongClick, handleWeakClick, handleMediumClick} = props;
+  const searchTerm = (e) => props.updateInput(e.target.value);
 
   return (
     <div className={styles.sidebarContainer}>
       <section className={styles.sidebarContent}>
-          <input className={styles.inputText}type = "text" placeholder ="Greatness awaits you..." onInput={(e) => props.updateInput(e.target.value)}></input>
+          <input className={styles.inputText}type = "text" placeholder ="Greatness awaits you..." onInput={searchTerm}></input>
         <form className={styles.beerStrengthRadioForm}>
           <h3>Beer Strength</h3>
             <div className={styles.strongRadio}>
