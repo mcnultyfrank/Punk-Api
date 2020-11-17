@@ -23,7 +23,38 @@
             margin: 20px 0px 20px 5px;
             padding: 5px;
             width: 15vw;
-            background-color: #2C343B;
+            background-color: rgba($color: #3F5A8D, $alpha: 0.2);
+            transition: 0.3s;
+
+            div{
+                position: relative;
+                flex-direction: row;
+                justify-content: start;
+                margin: 20px 0px 20px 5px;
+                
+                input{
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                    
+                }
+                label{
+                    cursor: pointer;
+                    &:hover{
+                        color: #C44741;
+                    }
+                }
+            }
+            
+        }
+        .beerBitternessRadioForm{
+            border-bottom: 1px solid #E5E1D1;
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px 20px 5px;
+            padding: 5px;
+            width: 15vw;
+            background-color: rgba($color: #7FB1B3, $alpha: 0.2);
             transition: 0.3s;
 
             div{
@@ -79,7 +110,7 @@
         height: 7%;
         margin: 20px 0px 20px 5px;
         padding: 10px;
-        background: #2C343B;
+        background-color: rgba($color: #C44741, $alpha: 0.8);
         transition: 0.5s ease;
         &:focus{
             width: 90%;

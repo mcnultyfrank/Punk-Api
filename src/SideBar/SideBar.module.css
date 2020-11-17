@@ -25,7 +25,7 @@
   margin: 20px 0px 20px 5px;
   padding: 5px;
   width: 15vw;
-  background-color: #2C343B;
+  background-color: rgba(63, 90, 141, 0.2);
   transition: 0.3s;
 }
 .sidebarContainer .sidebarContent .beerStrengthRadioForm div {
@@ -43,6 +43,33 @@
   cursor: pointer;
 }
 .sidebarContainer .sidebarContent .beerStrengthRadioForm div label:hover {
+  color: #C44741;
+}
+.sidebarContainer .sidebarContent .beerBitternessRadioForm {
+  border-bottom: 1px solid #E5E1D1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 20px 5px;
+  padding: 5px;
+  width: 15vw;
+  background-color: rgba(127, 177, 179, 0.2);
+  transition: 0.3s;
+}
+.sidebarContainer .sidebarContent .beerBitternessRadioForm div {
+  position: relative;
+  flex-direction: row;
+  justify-content: start;
+  margin: 20px 0px 20px 5px;
+}
+.sidebarContainer .sidebarContent .beerBitternessRadioForm div input {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+.sidebarContainer .sidebarContent .beerBitternessRadioForm div label {
+  cursor: pointer;
+}
+.sidebarContainer .sidebarContent .beerBitternessRadioForm div label:hover {
   color: #C44741;
 }
 .sidebarContainer .sidebarContent .randomButton {
@@ -74,7 +101,7 @@
   height: 7%;
   margin: 20px 0px 20px 5px;
   padding: 10px;
-  background: #2C343B;
+  background-color: rgba(196, 71, 65, 0.8);
   transition: 0.5s ease;
 }
 .sidebarContainer .sidebarContent .inputText:focus {

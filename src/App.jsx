@@ -39,6 +39,9 @@ const App = () => {
   const strongBeers = () => getApi("abv_gt=5");
   const mediumBeers = () => getApi("abv_lt=5");
   const weakBeers = () => getApi("abv_lt=1");
+  const strongBitterBeers = () => getApi("ibu_gt=50");
+  const mediumBitterBeers = () => getApi("ibu_lt=50");
+  const weakBitterBeers = () => getApi("ibu_lt=10");
   
   return (
     <div>
@@ -49,6 +52,9 @@ const App = () => {
       handleStrongClick={strongBeers}
       handleMediumClick={mediumBeers}
       handleWeakClick={weakBeers}
+      handleStrongBitterClick={strongBitterBeers}
+      handleMediumBitterClick={mediumBitterBeers}
+      handleWeakBitterClick={weakBitterBeers}
       updateInput={(value) => setInputValue(value)}
       />
       <BeerCards

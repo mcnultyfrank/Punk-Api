@@ -7,7 +7,7 @@ import BeerCards from "../BeerCards";
 
 
 const SideBar = (props) => {
-  const {handleStrongClick, handleWeakClick, handleMediumClick} = props;
+  const {handleStrongClick, handleWeakClick, handleMediumClick, handleStrongBitterClick, handleMediumBitterClick, handleWeakBitterClick} = props;
 
 
   return (
@@ -27,6 +27,21 @@ const SideBar = (props) => {
             <div className={styles.weakRadio}>
               <label for = "weak">Less than 0.5%</label>
               <input onClick={handleWeakClick} type="radio" id="weak" name = "beerStrength"></input>
+            </div>
+        </form>
+        <form className={styles.beerBitternessRadioForm}>
+          <h3>Bitterness Level</h3>
+            <div className={styles.strongRadio}>
+              <label for = "strongBitter">Over 50 IBU</label>
+              <input onClick={handleStrongBitterClick} type="radio" id="strongBitter" name = "beerBitterness"></input>
+            </div>
+            <div className={styles.mediumRadio}>
+              <label for = "mediumBitter">10 - 50 IBU</label>
+              <input onClick={handleMediumBitterClick} type="radio" id="mediumBitter" name = "beerBitterness"></input>
+            </div>
+            <div className={styles.weakRadio}>
+              <label for = "weakBitter">Less than 10 IBU</label>
+              <input onClick={handleWeakBitterClick} type="radio" id="weakBitter" name = "beerBitterness"></input>
             </div>
         </form>
       </section>
