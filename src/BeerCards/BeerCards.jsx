@@ -13,7 +13,7 @@ const BeerCards = (props) => {
   <div className={styles.mainContainer}>
     <section className={styles.pageContainer}>
       {showBeers.map((beer)=> {
-        return <Card beer={beer} />
+        return <Card key={beer.id} beer={beer} />
       })}
     </section>
 
