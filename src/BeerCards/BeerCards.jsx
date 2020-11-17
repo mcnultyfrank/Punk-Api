@@ -1,6 +1,5 @@
-import React, {useEffect} from "react";
+import React from "react";
 import styles from "./BeerCards.module.scss";
-import SideBar from "../SideBar"
 import Card from "./Card/Card";
  
 
